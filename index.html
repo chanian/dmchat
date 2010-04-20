@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<link href="inc/css/main.css" rel="stylesheet" media="all" type="text/css"></link>
+	<!-- Load 3rd party JS toolkit assets -->
+	<script src="inc/js/lib/jquery.min.js"></script>
+	<script src="inc/js/lib/jquery-ui.min.js"></script>
+	<script src="inc/js/lib/date.js"></script>
+	
+	<!-- Load core JS assets -->
+	<script src="inc/js/debugger.js" type="text/javascript" ></script>	
+	<script src="inc/js/twitter.js" type="text/javascript" ></script>
+	<script src="inc/js/chatwindow.js" type="text/javascript" ></script>
+	<script src="inc/js/windowmanager.js" type="text/javascript" ></script>	
+	
+	<script src="inc/js/application.js" type="text/javascript" ></script>	
+	<title>DM-Chat Client v.0.2</title>
+</head>
+<body>
+	<!-- Main stage area, not really a 'canvas' -->
+	<div id="canvas"></div>
+	
+	<!-- Side Panel -->
+	<div class="chatPanel">
+		<div class="chatPanelBorder">		
+		<div class="chatPanelContent">
+			<div id="login">
+				<div class="label">Twitter Login</div>
+				<form onSubmit="DMChat.login();return false;" action="#">	
+					<div><input type="text" id="t_username" value="chanian_robot2"></input></div>
+					<div><input type="password" id="t_pw" value='guest_pw'></input></div>			
+					<div><input type="submit" value="login"></input></div>
+				</form>
+				<div class="disclaimer">
+					*Using basic AUTH via HTTPS/SSL. 
+					Please login, or be kind with my guest account
+				</div>
+			</div>
+			<div id="create">
+				<div class="label">Start a Chat</div>
+				<div class="username"><input id="username"></input></div>
+				<div><input onclick="DMChat.WM.create();" type="button" value="Start New Chat"></input></div>
+				<div class="spacer"></div>			
+				<div class="label">Recent Chats</div>			
+				<div id="recent">
+					<div class="loading" id="loading">
+						<img src="inc/css/loading.gif"></img>
+						Loading...
+					</div>
+					<div class="refresh">
+						<input type="button" onclick="DMChat.pollData();" 
+								value="Manually Poll API"></input>
+					</div>					
+				</div>				
+			</div>
+		</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,317 @@
+/* Main template styling */
+body {
+	background-color:#bbbbbb;
+	font-family:arial, verdana, sans-serif;	
+	overflow:hidden;
+}
+
+/* Our "AJAX helper" */
+iframe {
+	position:absolute;
+	right:0px;
+	bottom:0px;	
+	width:10px;
+	height:10px;
+	visibility:hidden;
+}
+/* The right side chat panel */
+div.chatPanel {
+	min-height:80px;
+	width:160px;
+	position:absolute;
+	left:15px;
+	top:15px;
+	background-color:#343434;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	overflow:hidden;	
+}
+div.chatPanelBorder {
+	border:1px solid black;	
+	border-top:1px solid #565656;
+	border-left:1px solid #565656;	
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+div.chatPanelContent {
+	border:1px solid #898989;	
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;	
+	padding:10px;	
+}
+div.chatPanel div.label {
+	color:white;
+}
+div.chatPanel div.spacer {
+	padding-left:3px;
+	padding-right:3px;	
+	border-top:1px solid #000000;
+	border-bottom:1px solid #565656;	
+	margin-top:8px;
+	margin-bottom:8px;
+}
+div.chatPanel div.loading {
+	color:#dcdcdc;
+	font-size:13px;
+}
+div.chatPanel div.loading img {
+	position:relative;
+	top:3px;
+}
+div.chatPanel input {
+	width:130px;
+}
+div.chatPanel #login div {
+	margin-bottom:4px;
+}
+div.chatPanel #login div.disclaimer {
+	font-size:10px;
+	margin-top:20px;
+	color:#cdcdcd;
+}
+div.chatPanel #create {
+	display:none;
+}
+div.chatPanel div.username {
+	margin-bottom:5px;
+}
+div.chatPanel div.refresh {
+	margin-top:25px;
+}
+/* UI Specific details */
+div.dmWindow {
+	opacity:1.0;
+	z-index:10;
+	position:absolute;
+	width:300px;
+}
+div.dmWindow:hover {
+	opacity:1.0;
+}
+div.dmBorder {
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;	
+	border:1px solid #565656;	
+	border-top:1px solid #898989;
+	border-left:1px solid #898989;	
+	-moz-box-shadow: #333333 1px 1px 3px;
+	-webkit-box-shadow: #333333 1px 1px 3px;	
+}
+div.dmContent {
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;	
+	background-color:#898989;
+	border:1px solid #cdcdcd;
+}
+div.dmPart {	
+	margin-left:10px;
+	margin-right:10px;
+}
+div.dmHeader {
+	cursor:pointer;
+	position:relative;
+	padding-top:3px;
+	height:35px;
+}
+div.dmHeader div.close {
+	position:absolute;
+	right:0px;
+	top:5px;
+	
+	display:inline;
+	padding-left:3px;
+	padding-right:3px;	
+	border:1px solid #cccccc;
+	color:#cccccc;
+	font-size:13px;
+	cursor:pointer;	
+	
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;		
+}
+div.dmHeader div.close:hover {
+	color:white;
+	border:1px solid white;
+}
+div.dmHeader div.label {
+	padding-top:3px;
+	color:white;
+	font-weight:bold;
+	font-size:14px;
+}
+div.dmProfile {
+	display:none;
+	height:40px;
+}
+div.dmBody {
+	height:250px;
+	margin-bottom:10px;
+	background-color:white;	
+	border:1px solid #333333;
+	border-bottom:1px solid #acacac;
+	border-right:1px solid #acacac;	
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;	
+	overflow:hidden;
+}
+div.dmBody div.conversation {
+	padding:5px;
+	padding-right:10px;	
+	height:100%;
+	overflow-x:hidden;
+	overflow-y:auto;	
+}
+div.dmFooter {
+	text-align:right;
+	height:100px;
+}
+div.dmFooter textarea {
+	width:100%;
+}
+div.dmFooter input {
+	margin-top:5px;
+	width:80px;
+}
+div.dmFooterCounter {
+	float:left;
+	margin-top:10px;
+	font-size:12px;
+	color:#454545;	
+}
+
+/** What does an individual DM look like? */
+div.message {
+	position:relative;
+	font-size:14px;
+	color:#333333;	
+	font-weight:bold;
+	padding:4px;
+	padding-bottom:10px;	
+	margin-bottom:4px;
+	margin-top:4px;	
+}
+div.message-owner {
+	color:#565656;
+	background-color:#eeeeff;
+	font-weight:normal;
+}
+div.message div.text {
+	margin-top:4px;
+}
+div.message div.author {
+	font-size:12px;		
+	font-weight:bold;
+	color:#3366ff;
+	display:inline;
+}
+div.message div.date {
+	font-size:11px;	
+	padding-right:3px;
+	padding-top:3px;	
+	color:#acacac;
+	float:right;
+}
+/* Friends on chat panel */
+div.friend {
+	cursor:pointer;
+	position:relative;
+	padding-left:5px;
+	margin-top:3px;
+	margin-right:5px;
+	margin-bottom:10px;	
+	padding-top:2px;
+	padding-bottom:2px;
+	
+	background-color:#888888;
+	border:1px solid #cccccc;					
+	
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;	
+}
+div.friend div.count {
+	display:none;
+	position:absolute;
+	right:-10px;
+	top:-7px;
+	padding-left:5px;
+	padding-right:5px;
+	background-color:red;
+	color:white;
+	font-weight:bold;
+	font-size:14px;
+	
+	border:2px solid white;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;	
+	
+	-moz-box-shadow: #333333 2px 2px 5px;
+	-webkit-box-shadow: #333333 2px 2px 5px;	
+}
+div.friend div.name {
+	overflow:hidden;	
+	display:inline;
+	color:white;
+	font-size:14px;
+}
+div.friend:hover {
+	border:1px solid white;
+	background-color:#aaaaaa;
+}
+
+/* About and Log */
+div.about {
+	position:absolute;
+	top:10px;
+	right:20px;
+	font-size:13px;
+	width:400px;	
+	color:#787878;
+}
+div.about a {
+	color:#333377;
+}
+div.about div.title {
+	font-size:16px;
+	border-bottom:2px solid #787878;
+	padding-bottom:3px;	
+	margin-bottom:3px;
+}
+div.log {
+	-moz-user-select:none;
+	-webkit-user-select:none;	
+	
+	position:absolute;
+	top:400px;
+	right:20px;
+	width:300px;
+	color:#00aa00;
+	border:1px solid #565656;
+	background-color:#333333;
+	font-size:12px;	
+}
+div.log-content {
+	overflow-y:auto;
+	overflow-x:hidden;
+	height:140px;
+	margin:5px;
+}
+#log div.header {
+	position:relative;
+	padding-left:5px;
+	padding-top:2px;
+	font-weight:bold;
+	font-size:13px;
+	cursor:pointer;
+	border-bottom:1px solid #565656;
+	height:20px;
+}
+div.log div.close {
+	font-weight:normal;
+	position:absolute;
+	top:2px;
+	right:5px;
+	cursor:pointer;
+}
+div.log div.close:hover {
+	text-decoration:underline;
+}
